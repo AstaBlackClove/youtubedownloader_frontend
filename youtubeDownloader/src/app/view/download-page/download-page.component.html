@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row mt-2">
+        <div class="logo_container col-1">
+            <img class="logo" src="\assets\img\android-chrome-192x192.png" alt="">
+        </div>
+        <div class="col-1">
+            <h5 class="title mt-3">SaveTube</h5>
+        </div>
+    </div>
+    <div class="row mt-1 d-felx justify-content-center align-items-center">
+        <div class="col-6 mt-2">
+            <input type="text" class="form-control" placeholder="Paste the URl" [(ngModel)]="url" (ngModelChange)="getVideo()">
+            <!-- <small id="emailHelp" class="form-text title">We'll never share your email with anyone else.</small> -->
+        </div>
+        <button class="col-1 mt-2 btn btn-primary" (click)="getVideo()">
+            <img src="\assets\svgs\right_arrow.svg" alt="">
+        </button>
+    </div>
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-12 text-center" *ngIf="this.thumbnail != undefined">
+                <img class="thumbnail_img img-fluid" [src]="this.thumbnail" alt="">
+            </div>
+        </div>
+    </div>
+</div>
