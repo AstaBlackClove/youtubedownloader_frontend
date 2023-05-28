@@ -12,4 +12,27 @@
 .thumbnail_img{
     max-width: 1920px;
     max-height: 1080px;
+    width: 80%;
+    border-radius: 5px;
 }
+.loading{
+    max-width: 70%;
+    border-radius: 5px;
+}
+.title{
+    color: white;
+}
+.video_detail{
+    max-width: 85%;
+}
+table {
+    border-collapse: collapse;
+  }
+
+  table td,
+  table th {
+    border: none;
+  }
+  .table_container{
+    max-width: 50%;
+  }

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ViewRoutingComponent } from "./view-routing.module";
 import { DownloadPageComponent } from './download-page/download-page.component';
+import { HotToastModule } from '@ngneat/hot-toast';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { DownloadPageComponent } from './download-page/download-page.component';
     imports:[
         ViewRoutingComponent,
         FormsModule,
-        CommonModule
+        CommonModule,
+        HotToastModule.forRoot()
     ]
 })
 

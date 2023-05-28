@@ -9,18 +9,46 @@
     </div>
     <div class="row mt-1 d-felx justify-content-center align-items-center">
         <div class="col-6 mt-2">
-            <input type="text" class="form-control" placeholder="Paste the URl" [(ngModel)]="url" (ngModelChange)="getVideo()">
+            <input type="text" class="form-control" placeholder="Paste URL Here" (keyup.enter)="onEnterkeyPress($event)" [(ngModel)]="url">
             <!-- <small id="emailHelp" class="form-text title">We'll never share your email with anyone else.</small> -->
         </div>
         <button class="col-1 mt-2 btn btn-primary" (click)="getVideo()">
             <img src="\assets\svgs\right_arrow.svg" alt="">
         </button>
     </div>
-    <div class="container">
-        <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-12 text-center" *ngIf="this.thumbnail != undefined">
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="col-3 mt-3" *ngIf="loading">
+            <img class="loading" src="\assets\img\loading-thinking.gif" alt="">
+        </div>
+    </div>
+    <div class="container d-flex justify-content-around align-items-center mt-5">
+        <div class="row video_detail d-flex justify-content-around align-items-center">
+            <div class="col-4 mt-3" *ngIf="this.thumbnail != undefined">
                 <img class="thumbnail_img img-fluid" [src]="this.thumbnail" alt="">
             </div>
+            <div class="col-8">
+                <p class="title">{{title}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="container table_container mt-4" [hidden]="!content">
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="color: white; text-align: center;">Resolution</th>
+                        <th style="color: white; text-align: center;">Download</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let data of tableData">
+                    <tr>
+                        <td style="color: white; text-align: center;">{{data.resolution}}</td>
+                        <td style="color: white; text-align: center;" (click)="downloadVideoLink(data.downloadLink)" >
+                            <button class="btn btn-primary">Download</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
