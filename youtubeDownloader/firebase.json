@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/youtubeDownloader",
+    "public": "dist/youtube-downloader",
     "ignore": [
       "firebase.json",
       "**/.*",
