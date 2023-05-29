@@ -44,12 +44,12 @@ export class DownloadPageComponent implements OnInit {
           const thumb = res.thumb
   
           this.thumbnail = thumb.find((obj:any) =>{
-            obj.thumbanail.height === 1080 && obj.thumbanail.width >= 1920 && obj.thumbanail.width < 1930
-            return obj.thumbanail.url
+            obj.thumbanail?.height === 1080 && obj.thumbanail.width >= 1920 && obj.thumbanail.width < 1930
+            return obj.thumbnail.url
           })
     
           if(this.thumbnail){
-            this.thumbnail = this.thumbnail.thumbanail.url
+            this.thumbnail = this.thumbnail.thumbnail.url
           }else{
             this.toast.info('No Thumbnail Was Found..')
           }
