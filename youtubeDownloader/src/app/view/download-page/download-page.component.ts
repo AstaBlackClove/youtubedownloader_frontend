@@ -34,7 +34,7 @@ export class DownloadPageComponent implements OnInit {
 
   getVideo(){
     this.loading = true;
-    const youtubeUrlPattern = /^(https?:\/\/)?(www\.)?(m\.)?(youtu\.be\/|youtube\.com\/watch\?v=)([a-zA-Z0-9_-]{11})/;
+    const youtubeUrlPattern = /^(https?:\/\/)?(www\.)?(m\.)?(youtube\.com\/(watch\?v=|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
     if(youtubeUrlPattern.test(this.url)){
       const finalUrl = {
         "url":this.url
