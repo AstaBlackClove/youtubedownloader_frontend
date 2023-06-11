@@ -18,7 +18,7 @@ export class DownloadPageComponent implements OnInit {
   downloadVideo:any;
   tableData:any;
   finalValue:any;
-  content:boolean = false;
+  content:boolean = true;
 
   constructor(private api: ApiService,private toast: HotToastService) { }
 
@@ -34,6 +34,7 @@ export class DownloadPageComponent implements OnInit {
 
   getVideo(){
     this.loading = true;
+    this.content = true;
     const youtubeUrlPattern = /^(https?:\/\/)?(www\.)?(m\.)?(youtube\.com\/(watch\?v=|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
     if(youtubeUrlPattern.test(this.url)){
       const finalUrl = {
@@ -66,7 +67,7 @@ export class DownloadPageComponent implements OnInit {
           
           this.tableData = []
           this.resolution = downloadLinks.map((items:any) =>{
-            this.content = true;
+            this.content = false;
             this.tableData.push({
               resolution:items.resolution,
               downloadLink:items.downloadLink
