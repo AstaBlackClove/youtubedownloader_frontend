@@ -39,19 +39,41 @@
                 <table class="table" [hidden]="content">
                     <thead [hidden]="content">
                         <tr>
-                            <th style="color: white; text-align: center;">Resolution</th>
-                            <th style="color: white; text-align: center;">Download</th>
+                            <th class="text">Resolution</th>
+                            <th class="text">Download</th>
                         </tr>
                     </thead>
                     <tbody *ngFor="let data of tableData">
                         <tr>
-                            <td style="color: white; text-align: center;">{{data.resolution}}</td>
-                            <td style="color: white; text-align: center;" (click)="downloadVideoLink(data.downloadLink)" >
+                            <td class="text">{{data.resolution}}</td>
+                            <td class="text" (click)="downloadVideoLink(data.downloadLink)" >
                                 <button class="btn btn-primary">Download</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="row mt-5 mb-5">
+            <div class="col-sm-12 col-md -12 col-lg-4 mt-3">
+                <div class="d-flex justify-content-center">
+                    <img class="tutorial_img" src="\assets\img\Youtube_Link.png" alt="">
+                </div>
+                <h5 class="text mt-3">Copy the URL of the video you want to download</h5>
+            </div>
+            <div class="col-sm-12 col-md -12 col-lg-4 mt-3">
+                <div class="d-flex justify-content-center">
+                    <img class="tutorial_img" src="\assets\img\Past_Url.png" alt="">
+                </div>
+                <h5 class="text mt-3">Past the URL in the input field</h5>
+            </div>
+            <div class="col-sm-12 col-md -12 col-lg-4 mt-3">
+                <div class="d-flex justify-content-center">
+                    <img class="tutorial_img" src="\assets\img\Video_Loaded.png" alt="">
+                </div>
+                <h5 class="text mt-3">Download the resolution available</h5>
             </div>
         </div>
     </div>
