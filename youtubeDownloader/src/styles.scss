@@ -9,5 +9,45 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 99vh;
+    height: 100vh;
+}
+
+@media screen and(max-width:1200px){
+    body{
+        background-image: url('/assets/img/vector.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+}
+
+@media screen and(max-width:992px){
+    body{
+        background-image: url('/assets/img/vector.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+}
+
+@media screen and(max-width:768px){
+    body{
+        background-image: url('/assets/img/vector.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+}
+
+@media screen and(max-width:576px){
+    body{
+        background-image: url('/assets/img/vector.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
 }
