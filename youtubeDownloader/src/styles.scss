@@ -1,14 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
     font-family: "defaultFont";
-    src: url("/assets/fonts/OpenSans-Regular.ttf");
+    src: url("assets/fonts/OpenSans-Regular.ttf");
 }
 
+@font-face {
+    font-family: "NewFont";
+    src: url("assets/fonts/VictorMono-SemiBold.ttf");
+}
+
+// body{
+//     background-image: url('/assets/img/vector.jpg');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     min-height: 99vh;
+// }
+
 body{
-    background-image: url('/assets/img/vector.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    min-height: 99vh;
+    background-color: #e2e2e2;
 }
 

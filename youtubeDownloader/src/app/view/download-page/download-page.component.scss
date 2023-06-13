@@ -1,18 +1,60 @@
-.text{
-    color: white;
+.header{
+    padding: 10px;
+    background-color: #ffff;
+    width: 100%;
+    margin: 0px;
+    border-bottom: 3px solid black;
+}
+.input_field{
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 3px 3px #000;
+}
+.btn{
+    color: #000;
+    background-color: #f1f233;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 0.5rem 0.75rem;
+    font-size: .875rem;
+    line-height: 1;
+    // transition: all .14s cubic-bezier(.25, .46, .45, .94);
+    box-shadow: 3px 3px #000;
+}
+// .btn:hover{
+//     transform: translate(-0.25rem, -0.25rem);
+//     box-shadow: 3px 3px #000;
+// }
+.hint_text{
+    font-family: 'NewFont';
+    color: black;
+    margin-bottom: 0px;
     text-align: center;
+    padding-left: 10px;
+    font-size: 15px;
+}
+.text{
+    font-family: 'NewFont';
+    color: black;
+    margin-bottom: 0px;
+    text-align: center;
+    padding-left: 10px;
+    font-size: 19px;
 }
 .logo{
     width: 4em;
+    border-radius: 35px;
+    border: 2px solid black;
 }
 .logo_container{
     width: 5em;
 }
 .title{
-    font-family: 'defaultFont';
-    color: white;
+    font-family: 'NewFont';
+    color: black;
     margin-bottom: 0px;
     text-align: center;
+    font-size: 2em;
 }
 .thumbnail_img{
     max-width: 1920px;
@@ -23,9 +65,6 @@
 .loading{
     max-width: 100%;
     border-radius: 5px;
-}
-.title{
-    color: white;
 }
 .video_detail{
     max-width: 85%;
@@ -42,6 +81,15 @@ table {
     max-width: 50%;
   }
 .tutorial_img{
-    max-width: 100%;
+    width: 250px;
+    height: 100px;
     border-radius: 10px;
+}
+.box_container{
+    min-width: 20%;
+    padding: 2%;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px #000;
 }
