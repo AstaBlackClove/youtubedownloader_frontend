@@ -1,16 +1,16 @@
-<div class="container">
-    <div class="row mt-2">
-        <div class="logo_container col-1">
-            <img class="logo" src="\assets\img\android-chrome-192x192.png" alt="">
-        </div>
-        <div class="col-1">
-            <h5 class="title mt-3">SaveTube</h5>
-        </div>
+<div class="row header">
+    <div class="logo_container col-6">
+        <img class="logo" src="\assets\img\android-chrome-192x192.png" alt="">
     </div>
+    <div class="col-6 d-flex justify-content-start align-items-center">
+        <h5 class="title">SaveTube</h5>
+    </div>
+</div>
+<div class="container mt-5">
     <div class="row mt-1 d-felx justify-content-center align-items-center">
         <div class="col-sm-12 col-lg-6 mt-2">
-            <input type="text" class="form-control" placeholder="Paste URL Here" (keyup.enter)="onEnterkeyPress($event)" [(ngModel)]="url">
-            <small id="emailHelp" class="form-text title">Please make sure the URl is valid.</small>
+            <input type="text" class="form-control input_field" placeholder="Paste URL Here" (keyup.enter)="onEnterkeyPress($event)" [(ngModel)]="url">
+            <small id="emailHelp" class="form-text hint_text">Please make sure the URl is valid...</small>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-1 mb-3">
             <button class="col-12 btn btn-primary" (click)="getVideo()">
@@ -18,60 +18,62 @@
             </button>
         </div>
     </div>
-    <div class="d-flex justify-content-center align-items-center">
+    <div class="d-flex justify-content-center align-items-center mt-3">
         <div class="d-flex justify-content-center col-sm-12 col-md-12 col-lg-3 mt-3" *ngIf="loading">
             <img class="loading" src="\assets\img\loading-thinking.gif" alt="">
         </div>
     </div>
-    <div [hidden]="content">
-        <div class="container d-flex justify-content-around align-items-center mt-5">
-            <div class="row video_detail d-flex justify-content-around align-items-center">
-                <div class="d-flex justify-content-center align-items-center col-sm-12 col-md-12 col-lg-4 mt-3" *ngIf="this.thumbnail != undefined">
-                    <img class="col-sm-12 col-md-12 thumbnail_img img-fluid" [src]="this.thumbnail" alt="">
-                </div>
-                <div class="d-felx justify-content-center align-items-center col-sm-12 col-md-12 col-lg-8">
-                    <p class="col-sm-12 mt-2 title">{{title}}</p>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="video_detail_container" [hidden]="content">
+            <div class="container d-flex justify-content-around align-items-center mt-2">
+                <div class="row video_detail d-flex justify-content-around align-items-center">
+                    <div class="d-flex justify-content-center align-items-center col-sm-12 col-md-12 col-lg-4 mt-3" *ngIf="this.thumbnail != undefined">
+                        <img class="col-sm-12 col-md-12 thumbnail_img img-fluid" [src]="this.thumbnail" alt="">
+                    </div>
+                    <div class="d-felx justify-content-center align-items-center col-sm-12 col-md-12 col-lg-8">
+                        <p class="col-sm-12 mt-2 title">{{title}}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="d-flex justify-content-center align-items-center container table_container mt-4" [hidden]="content">
-            <div class="row">
-                <table class="table" [hidden]="content">
-                    <thead [hidden]="content">
-                        <tr>
-                            <th class="text">Resolution</th>
-                            <th class="text">Download</th>
-                        </tr>
-                    </thead>
-                    <tbody *ngFor="let data of tableData">
-                        <tr>
-                            <td class="text">{{data.resolution}}</td>
-                            <td class="text" (click)="downloadVideoLink(data.downloadLink)" >
-                                <button class="btn btn-primary">Download</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="d-flex justify-content-center align-items-center container table_container mt-3" [hidden]="content">
+                <div class="row">
+                    <table class="table" [hidden]="content">
+                        <thead [hidden]="content">
+                            <tr>
+                                <th class="text">Resolution</th>
+                                <th class="text">Download</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let data of tableData">
+                            <tr>
+                                <td class="text">{{data.resolution}}</td>
+                                <td class="text" (click)="downloadVideoLink(data.downloadLink)" >
+                                    <button class="btn btn-primary">Download</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
     <div>
-        <div class="row mt-5 mb-5">
-            <div class="col-sm-12 col-md -12 col-lg-4 mt-3">
-                <div class="d-flex justify-content-center">
-                    <img class="tutorial_img" src="\assets\img\Youtube_Link.png" alt="">
+        <div class="row mt-3 mb-5 p-4 d-flex justify-content-around">
+            <div class="box_container col-sm-12 col-md-12 col-lg-4 mt-3 lg-me-3">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img class="tutorial_img" src="\assets\img\Screenshot_1.png" alt="">
                 </div>
                 <h5 class="text mt-3">Copy the URL of the video you want to download</h5>
             </div>
-            <div class="col-sm-12 col-md -12 col-lg-4 mt-3">
-                <div class="d-flex justify-content-center">
-                    <img class="tutorial_img" src="\assets\img\Past_Url.png" alt="">
+            <div class="box_container col-sm-12 col-md-12 col-lg-4 mt-3 lg-me-3">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img class="tutorial_img" src="\assets\img\Screenshot_2.png" alt="">
                 </div>
                 <h5 class="text mt-3">Past the URL in the input field</h5>
             </div>
-            <div class="col-sm-12 col-md -12 col-lg-4 mt-3">
-                <div class="d-flex justify-content-center">
-                    <img class="tutorial_img" src="\assets\img\Video_Loaded.png" alt="">
+            <div class="box_container col-sm-12 col-md-12 col-lg-4 mt-3 lg-me-3">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img class="tutorial_img" src="\assets\img\Screenshot_3.png" alt="">
                 </div>
                 <h5 class="text mt-3">Download the resolution available</h5>
             </div>

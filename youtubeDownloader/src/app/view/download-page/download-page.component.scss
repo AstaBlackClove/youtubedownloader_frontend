@@ -1,31 +1,81 @@
-.text{
-    color: white;
+.header{
+    padding: 10px;
+    background-color: #ffb587;
+    width: 100%;
+    margin: 0px;
+    border-bottom: 3px solid black;
+}
+.input_field{
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 3px 3px #000;
+}
+.btn{
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 0.5rem 0.75rem;
+    font-size: .875rem;
+    line-height: 1;
+    // transition: all .14s cubic-bezier(.25, .46, .45, .94);
+    box-shadow: 3px 3px #000;
+}
+@media screen and(max-width:1920px){
+    .btn:hover{
+        background-color: #f1f233;
+    }
+}
+@media screen and (max-width:576px){
+    .btn:active{
+        transform: translate(0.15rem, 0.15rem);
+        box-shadow: 3px 3px #000;
+    }
+}
+.hint_text{
+    font-family: 'NewFont';
+    color: black;
+    margin-bottom: 0px;
     text-align: center;
+    padding-left: 10px;
+    font-size: 15px;
+}
+.text{
+    font-family: 'NewFont';
+    color: black;
+    margin-bottom: 0px;
+    text-align: center;
+    padding-left: 10px;
+    font-size: 19px;
 }
 .logo{
     width: 4em;
+    border-radius: 35px;
+    border: 2px solid black;
 }
 .logo_container{
     width: 5em;
 }
 .title{
-    font-family: 'defaultFont';
-    color: white;
+    font-family: 'NewFont';
+    color: black;
     margin-bottom: 0px;
     text-align: center;
+    font-size: 2em;
+    text-decoration: underline;
 }
 .thumbnail_img{
     max-width: 1920px;
     max-height: 1080px;
     width: 80%;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    box-shadow: 3px 3px #000;
 }
 .loading{
     max-width: 100%;
-    border-radius: 5px;
-}
-.title{
-    color: white;
+    border-radius: 10px;
+    border: 2px solid #000;
+    box-shadow: 3px 3px #000;
 }
 .video_detail{
     max-width: 85%;
@@ -39,9 +89,54 @@ table {
     border: none;
   }
   .table_container{
-    max-width: 50%;
+    max-width: 100%;
+    background-color: #00ef83;
+    border-radius: 10px;
+    box-shadow: 3px 3px #000;
+    border: 2px solid #000;
   }
 .tutorial_img{
-    max-width: 100%;
+    width: 250px;
+    height: 100px;
     border-radius: 10px;
+    border: 2px solid #000;
+    box-shadow: 3px 3px #000;
+}
+@media screen and (max-width:1920px){
+    .box_container{
+        max-width: 30%;
+        padding: 2%;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 10px;
+        box-shadow: 3px 3px #000;
+    }
+}
+@media screen and (max-width:992px){
+    .box_container{
+        min-width: 45%;
+        padding: 2%;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 10px;
+        box-shadow: 3px 3px #000;
+    }
+}
+@media screen and (max-width:768px){
+    .box_container{
+        min-width: 100%;
+        padding: 2%;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 10px;
+        box-shadow: 3px 3px #000;
+    }
+}
+.video_detail_container{
+    max-width: 95%;
+    background-color: #ffff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 3px 3px #000;
+    padding: 2%;
 }
